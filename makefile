@@ -1,4 +1,4 @@
-EXEC = tssp
+EXEC = exec
 CC = icpc
 SRCDIR = src/
 MKLROOT = /opt/intel/mkl
