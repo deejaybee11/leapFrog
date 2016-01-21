@@ -36,4 +36,6 @@
 
 void SolveImaginaryTime(SimulationData &sim_data, PotentialData &potential_data, WavefunctionData &wavefunction_data);
 
+void SolveRealTime(SimulationData &sim_data, PotentialData &potential_data, WavefunctionData &wavefunction_data);
+
 #endif    //    _SOLVE_H

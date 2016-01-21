@@ -30,6 +30,7 @@
 #include "../include/wavefunction_data.hpp"
 #include "../include/potential_data.hpp"
 #include "../include/solve.hpp"
+#include "../include/save_data.hpp"
 
 int main() {
 
@@ -39,6 +40,7 @@ int main() {
 	mkl_disable_fast_mm();
 	
 	SimulationData sim_data(2048);
+	save_data(sim_data.x, sim_data, "x.bin");
 	WavefunctionData wavefunction_data(sim_data);
 	PotentialData potential_data(sim_data);
 	
@@ -46,6 +48,8 @@ int main() {
 	vdMul(sim_data.num_points, wavefunction_data.psi_abs2, wavefunction_data.psi_abs2, wavefunction_data.psi_abs2);
 
 	SolveImaginaryTime(sim_data, potential_data, wavefunction_data);
+
+	SolveRealTime(sim_data, potential_data, wavefunction_data);
 
 	return 0;
 }

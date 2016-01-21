@@ -38,11 +38,13 @@ public:
 	MKL_Complex16 *psi_old;
 	MKL_Complex16 *psi_new;
 	MKL_Complex16 *conj_psi;
-	MKL_Complex16 *psi_temp;	
+	double *psi_tf;	
 	double *psi_abs2;
 
 	void calc_norm(SimulationData &sim_data, MKL_Complex16 *wf);
+	void calc_norm(SimulationData &sim_data, double *wf);
 	void normalize_wf(SimulationData &sim_data, MKL_Complex16 *wf);
+	void normalize_wf(SimulationData &sim_data,  double *wf);
 	double get_norm() { return this->wavefunction_norm; };
 	
 private:

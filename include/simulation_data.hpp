@@ -42,7 +42,7 @@ public:
 	double dt;
 	double *x;
 	double a1;
-	double *chemical_potential;
+	double chemical_potential;
 };
 
 #endif    //    _SIMULATION_DATA_H
